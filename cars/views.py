@@ -1,9 +1,16 @@
 from django.shortcuts import render
+from cars.models import Car
 
 # Create your views here.
 def cars_view(request):
+    cars = Car.objects.all()
+    search = request.GET.get('search')
+
+    if search:
+        cars = Car.objects.filter(model__contains=search)
+
     return render(
         request,
         'cars.html',
-         {'cars': {'model': 'Astra 2.0'}}
+         {'cars': cars}
     )
