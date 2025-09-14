@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i=4nqa930_9aj1#qcasb$1@jr-w65ff#8c1)x$3z00qj#jaju3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['carros-dev.local']
 
 
 # Application definition
